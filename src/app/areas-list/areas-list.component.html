@@ -1,0 +1,32 @@
+<p>Areas</p>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" id="loading">Loading...</span>
+    </div>
+</div>
+<table class="table" id="tab">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let area of areas">
+            <td>{{ area.name }}</td>
+            <table class="table" id="tab1">
+                <thead>
+                    <tr>
+                        <th scope="col">Thing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let thing of things">
+                        <td *ngIf="thing.areaId == area.areaId">
+                            {{thing.areaId}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </tr>
+    </tbody>
+</table>
