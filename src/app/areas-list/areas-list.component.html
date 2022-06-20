@@ -1,32 +1,12 @@
-<p>Areas</p>
-<div class="d-flex justify-content-center">
-    <div class="spinner-border" role="status">
-        <span class="sr-only" id="loading">Loading...</span>
+<div *ngFor="let area of areas" class="container-fluid d-block">
+    <div>{{area.name}}</div>
+    <div class="row ">
+        <div class="container-fluid d-flex justify-content-start">
+            <div *ngFor="let thing of things">
+                <div *ngIf="thing.areaId == area.areaId" class="col">
+                    <button class="btn btn-lg btn-my"> <sub class="my-fix1">{{thing.sku}}</sub>       <sup class="align-top my-fix">{{thing.defaultSku}}</sup> </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<table class="table" id="tab">
-    <thead>
-        <tr>
-            <th scope="col">Name</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let area of areas">
-            <td>{{ area.name }}</td>
-            <table class="table" id="tab1">
-                <thead>
-                    <tr>
-                        <th scope="col">Thing</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let thing of things">
-                        <td *ngIf="thing.areaId == area.areaId">
-                            {{thing.areaId}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </tr>
-    </tbody>
-</table>

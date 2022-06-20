@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AreasListComponent } from './areas-list/areas-list.component';
+import { AreasComponent } from './areas/areas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AreasListComponent
+    AreasListComponent,
+    AreasComponent
   ],
   imports: [
     BrowserModule,

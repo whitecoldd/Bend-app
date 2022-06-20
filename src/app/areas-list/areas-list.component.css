@@ -1,0 +1,21 @@
+.btn-my{
+    margin: 10px;
+    background-color: #3662a8;
+    width: 140px;
+    height: 90px;
+}
+.container-fluid{
+    background-color: #19263b;
+    color: whitesmoke;
+}
+.my-fix{
+    text-align: right;
+    position: relative;
+    padding-left: 20px;
+}
+.my-fix1{
+    padding-left: 40px;
+    font-size: larger;
+    text-align: center;
+    vertical-align: baseline;
+}

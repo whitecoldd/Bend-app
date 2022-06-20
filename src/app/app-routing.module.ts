@@ -4,7 +4,7 @@ import { AreasListComponent } from './areas-list/areas-list.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'areas' },
-  { path: 'areas', component: AreasListComponent }
+  { path: 'areas', component: AreasListComponent },
 ];
 
 @NgModule({
